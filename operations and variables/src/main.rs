@@ -9,7 +9,4 @@ fn main() {
 
     println!("numbers {}", 10f64 + 200.0 - 2.0 / 199.0);
     println!("millions {}", 10_000_000_000u64);
-
-    let long_tuple = (1u8, -100i32, 982f32, 'b', false );
-    println!("Tuple {:?}", long_tuple)
 }
