@@ -3,9 +3,10 @@ get started
 https://www.rust-lang.org/pt-BR/learn/get-started
 
 
-| Descrição | comando |
+| description | command |
 |-------------------------|-------------|
-| compilar | cargo build |
-| executar | cargo run |
-| testar | cargo test |
-| gerar documentação | cargo doc |
+| new | cargo new project-name |
+| compile | cargo build |
+| run | cargo run |
+| test | cargo test |
+| make docs | cargo doc |
