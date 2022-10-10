@@ -1,10 +1,15 @@
 const MY_CONST_ABC: &str = "santos";
 
 fn main() {
-    let qualquerVariael = "abc, faz inferenia";
-    let qualquerVariael2: &str = "abc, faz inferenia2";
+    let any_variable = "abc, faz inferenia";
+    let any_variable2: &str = "abc, faz inferenia2";
+    let vectors: Vec<&str> = vec!["abc", "123"];
+    let _not_unused_var_and_ignore: i8 = 1;
 
-    println!("{}, {} {}", qualquerVariael, qualquerVariael2, MY_CONST_ABC);
+    println!(
+        "{}, {} {} {:?}",
+        any_variable, any_variable2, MY_CONST_ABC, vectors
+    );
     println!("logic1 {}", !true);
     println!("logic2! {}", !true || false);
     println!("logic3! {}", !true && false || true);
