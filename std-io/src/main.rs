@@ -1,6 +1,10 @@
 use std::io;
 
-fn convert_to_int(number: &String) -> i32 {
+fn convert_to_int_and_reference(number: &String) -> i32 {
+    return number.trim().parse::<i32>().unwrap();
+}
+
+fn convert_to_int(number: String) -> i32 {
     return number.trim().parse::<i32>().unwrap();
 }
 
@@ -13,9 +17,14 @@ fn main() {
     println!("type a number:");
     io::stdin().read_line(&mut number2).expect("unknow error");
 
-    if convert_to_int(&number1) > convert_to_int(&number2) {
+    let number_i32: i32 = convert_to_int(number1); // move this variable number to this funcion
+
+    if number_i32 > convert_to_int_and_reference(&number2) {
         println!("number1 > number2");
     } else {
         println!("number1 <= number2");
     }
+
+    println!("number1 {}", number_i32);
+    println!("number2 {}", number2);
 }
