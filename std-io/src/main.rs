@@ -18,7 +18,7 @@ fn main() {
     io::stdin().read_line(&mut number2).expect("unknow error");
 
     let number_i32: i32 = convert_to_int(number1); // move this variable number to this funcion
-
+                                                   // number1 no available in scope
     if number_i32 > convert_to_int_and_reference(&number2) {
         println!("number1 > number2");
     } else {

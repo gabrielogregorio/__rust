@@ -7,6 +7,8 @@ fn main() {
     let vectors: Vec<&str> = vec!["abc", "123"];
     let _not_unused_var_and_ignore: i8 = 1;
 
+    println!("size {} is {}", any_variable, any_variable.len());
+
     println!(
         "{}, {} {} {:?}",
         any_variable, any_variable2, MY_CONST_ABC, vectors
@@ -33,6 +35,13 @@ fn main() {
     if 10 / 2 == 5 {
         println!("Here 3");
     }
+
+    let message = if 1f32 > 0.1f32 {
+        "this not is"
+    } else {
+        "this is"
+    };
+    println!("{}", message);
 
     return;
 }

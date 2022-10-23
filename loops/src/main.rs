@@ -4,6 +4,18 @@ fn main() {
         println!("Hello {}", x);
     }
 
+    let games = vec!["gta3", "gta sa", "gta V", "horizon zero down"];
+
+    for game in games {
+        println!("game is {}", game);
+    }
+
+    let array: [&str; 2] = ["abc", "def"];
+
+    for array_item in array.iter() {
+        println!("game with iter is {}", array_item);
+    }
+
     // while...
     let mut count = 0;
     while count < 10 {
@@ -17,13 +29,13 @@ fn main() {
         count2 = count2 + 1;
         println!("start block = {}", count2);
 
-        if count2 == 998 {
+        if count2 == 14 {
             continue;
         }
 
         println!("end block");
 
-        if count2 == 999 {
+        if count2 == 15 {
             println!("stop loop");
             break;
         }
