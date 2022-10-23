@@ -1,4 +1,5 @@
 const MY_CONST_ABC: &str = "santos";
+const NUMBER_2: u8 = 6;
 
 fn main() {
     let any_variable = "abc, faz inferenia";
@@ -20,4 +21,18 @@ fn main() {
 
     println!("numbers {}", 10f64 + 200.0 - 2.0 / 199.0);
     println!("millions {}", 10_000_000_000u64);
+
+    if any_variable == "abc" || (NUMBER_2 * NUMBER_2) == 36 {
+        println!("Here");
+    }
+
+    if !(1 == 2) {
+        println!("Here 2");
+    }
+
+    if 10 / 2 == 5 {
+        println!("Here 3");
+    }
+
+    return;
 }
