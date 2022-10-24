@@ -1,3 +1,5 @@
+use std::mem;
+
 const MY_CONST_ABC: &str = "santos";
 const NUMBER_2: u8 = 6;
 
@@ -42,6 +44,33 @@ fn main() {
         "this is"
     };
     println!("{}", message);
+
+    let a: i8 = 1;
+    let b: u8 = 1;
+    let c: i32 = 1;
+    let d: char = 'a';
+    let e: &str = "a";
+    let f: String = String::from("a");
+    let g: isize = 123; // size of reference local memory
+    let h: bool = true;
+
+    println!("a = '{}', i8     - size {} bytes", a, mem::size_of_val(&a));
+    println!("b = '{}', u8     - size {} bytes", b, mem::size_of_val(&b));
+    println!("c = '{}', i32    - size {} bytes", c, mem::size_of_val(&c));
+    println!("d = '{}', char   - size {} bytes", d, mem::size_of_val(&d));
+    println!("e = '{}', &str   - size {} bytes", e, mem::size_of_val(&e));
+    println!("f = '{}', String - size {} bytes", f, mem::size_of_val(&f));
+    println!("g = '{}', String - size {} bytes", g, mem::size_of_val(&g));
+    println!("h = '{}', String - size {} bytes", h, mem::size_of_val(&h));
+
+    let squared = i32::pow(3i32, 3);
+    println!("{}", squared);
+
+    let squared_int = f32::powi(3f32, 3);
+    println!("{}", squared_int);
+
+    let squared_float = f32::powf(3f32, 3.5);
+    println!("{}", squared_float);
 
     return;
 }

@@ -1,4 +1,4 @@
-use std::io;
+use std::{io, io::BufRead}; //FOR SECOND STEP BufRead
 
 fn convert_to_int_and_reference(number: &String) -> i32 {
     return number.trim().parse::<i32>().unwrap();
@@ -27,4 +27,14 @@ fn main() {
 
     println!("number1 {}", number_i32);
     println!("number2 {}", number2);
+
+    // SECOND STEP
+
+    let stdin = io::stdin();
+    let mut text: String = String::new();
+
+    println!("here text:");
+    text = stdin.lock().lines().next().unwrap().unwrap();
+
+    println!("{}", text);
 }
