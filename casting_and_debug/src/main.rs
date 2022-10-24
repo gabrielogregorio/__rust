@@ -8,4 +8,9 @@ fn main() {
     println!("number {}", number);
     println!("Hello, world! {}", magic(10f32, 20u8));
     println!("Hello, world! {}", magic(14f32, 32u8));
+
+    let input: String = String::from("12a");
+
+    let number: i32 = input.parse().expect("Not is number");
+    println!("{}", number);
 }
