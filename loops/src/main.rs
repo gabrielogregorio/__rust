@@ -40,4 +40,13 @@ fn main() {
             break;
         }
     }
+
+    // loop and modify
+    let mut items_to_sum: Vec<i32> = vec![10, 20, 30];
+    for item in &mut items_to_sum {
+        // get object by reference and modify
+        *item *= 10;
+        println!("New value is {}", item);
+    }
+    println!("new vector {:?}", items_to_sum);
 }
