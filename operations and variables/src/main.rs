@@ -72,5 +72,12 @@ fn main() {
     let squared_float = f32::powf(3f32, 3.5);
     println!("{}", squared_float);
 
+    let mut test: String = String::from("texto");
+    test.push_str("string");
+    let immutable = &test;
+    println!("{} {}", immutable, test);
+    // test.push_str("ss"); // ERROR immutable borrow later used here
+    println!("{}", immutable);
+
     return;
 }

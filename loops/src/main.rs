@@ -16,6 +16,10 @@ fn main() {
         println!("game with iter is {}", array_item);
     }
 
+    for array_item in (1..5).rev() {
+        println!("game with iter is {}", array_item);
+    }
+
     // while...
     let mut count = 0;
     while count < 10 {
