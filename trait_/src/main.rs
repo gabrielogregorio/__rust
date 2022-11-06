@@ -15,11 +15,18 @@ struct Circle {
 trait AreaCalc {
     fn area(&self) -> f64;
     fn get_name(&self) -> &String;
+    fn this_is_associate_function() -> bool;
 }
 
 impl AreaCalc for Form {
     fn area(&self) -> f64 {
+        // methods implements.area()
         self.width * self.height
+    }
+
+    // função associada, AreaCalc::this_is_associate_function()
+    fn this_is_associate_function() -> bool {
+        return true;
     }
 
     fn get_name(&self) -> &String {
@@ -30,6 +37,10 @@ impl AreaCalc for Form {
 impl AreaCalc for Circle {
     fn area(&self) -> f64 {
         (self.radius * self.radius) * PI
+    }
+
+    fn this_is_associate_function() -> bool {
+        return true;
     }
     fn get_name(&self) -> &String {
         &self.name
@@ -51,6 +62,8 @@ fn main() {
         radius: 2f64,
         name: "Circle".to_string(),
     };
+
+    Form::this_is_associate_function();
 
     show_area_strategy(form);
     show_area_strategy(circle);
